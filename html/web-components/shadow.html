@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Seample - Shadow-DOM</title>
+</head>
+
+<body>
+	<!-- simple button with root and host model  --> 
+	<button>Hello, World </button>
+	<script>
+	    // var host = document.querySelector('button');
+	    // var root = host.createShadowRoot();
+	    // root.textContent = 'こんにちは、影の世界!';
+	</script>
+
+	<!-- with web-component shadow-DOM  --> 
+	<h2> With Web-Component Shadow-DOM  </h2>
+
+	<div id="nameTag">Bob</div>
+	<template id="nameTagTemplate">
+		<style>
+		.outer {
+		  border: 2px solid brown;
+		  border-radius: 1em;
+		  background: red;
+		  font-size: 20pt;
+		  width: 12em;
+		  height: 7em;
+		  text-align: center;
+		}
+		.boilerplate {
+		  color: white;
+		  font-family: sans-serif;
+		  padding: 0.5em;
+		}
+		.name {
+		  color: black;
+		  background: white;
+		  font-family: "Marker Felt", cursive;
+		  font-size: 45pt;
+		  padding-top: 0.2em;
+		}
+		</style>
+		<div class="outer">
+		  <div class="boilerplate">
+		    Hi! My name is
+		  </div>
+		  <div class="name">
+		    Bob
+		  </div>
+		</div>
+	</template>
+
+	<script>
+
+
+		var shadow = document.querySelector('#nameTag').createShadowRoot();
+		var content = document.querySelector('#nameTagTemplate').content;
+
+		shadow.appendChild(document.importNode(content, true));
+		
+
+	</script>
+</body>
+
+</html> 

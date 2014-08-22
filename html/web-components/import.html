@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Seample - HTML5 - Import </title>
+	<!-- load/error async event (manage the load/error on import) --> 
+	<script asyn>
+		// function to handle the Good load of the import (event passed)
+		function handleLoad(e){
+			console.log('Ok IMPORTED : ' + e.target.href);
+		}
+
+		// function to handle the Bad import (Error) (event passed)
+		function handleError(e){
+			console.log('NOT IMPORTED : ' + e.target.href);
+		}
+	</script>
+	<!-- came on import some stuff (+ load/error handler)  --> 
+	<!-- <link rel="import" href="http://localhost:3000/content" onload="handleLoad(event)" onerror="handleError(event)"> -->
+	<link rel="import" href="http://localhost:3000/warnings" onload="handleLoad(event)" onerror="handleError(event)">
+</head>
+
+<body>
+	<h3>With import you can import all a HTML file can contain !!! </h3>
+	<p> The URL of an import is called import-location, to load a content from another domain, the import location needs 
+	to be CORS-enable (we use a express server here to serve these resources). </p>
+
+	<h4>Actually i importing from two location : </h4>
+	<ul>
+		<li>http://localhost:8080/content</li>
+		<li>http://localhost:8080/warnings</li>
+	</ul>
+
+	<script type="text/javascript">
+		function checkImport(){
+
+			return 'import' in document.createElement('link');
+		}
+
+		if (checkImport()){
+			// Good to go 
+			console.log('Ok - (WebComponent) Import - is Supported from your browser !  ');
+		}else {
+			// Use other libraries supported by browser 
+			console.log('NOT Good - (WebComponent) Import - is NOT Supported from your browser !  ');
+		}
+	</script>
+
+	<h3> Now we can go to use the content imported ! </h3>
+	<button onclick="getImport()">getImport()</button>
+	<script type="text/javascript">
+		// To access the content of an import, use the link element's .import property:
+		// the content is returned like a Obj HTMLDocument 
+		var link = document.querySelector('link[rel="import"]');
+		var content = link.import;
+
+		// Grab DOM from warnings.html's document 
+		var el = content.querySelector('.warning');
+		
+
+		function getImport(){
+			document.body.appendChild(el.cloneNode(true));
+		};
+	</script>
+</body>
+
+</html> 
+ 

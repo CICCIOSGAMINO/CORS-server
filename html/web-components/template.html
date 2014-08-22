@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Seample - Shadow-DOM</title>
+</head>
+
+<body>
+
+	<button onclick="useIt()"> Use me</button>
+	<div id='container'></div>
+	<script type="text/javascript">
+		function useIt(){
+			var content = document.querySelector('#t_template').content;
+
+			// do something before active the template if needed 
+			var span = content.querySelector('span');
+			span.textContent = parseInt(span.textContent) + 1;
+
+			// active the template #t_template
+			document.querySelector('#container').appendChild(document.importNode(content, true));
+
+		}
+	</script>
+
+	<template id='t_template'>
+		<div>Template Uded : <span>0</span></div>
+		<script>alert('Thanks')</script>
+	</template>
+</body>
