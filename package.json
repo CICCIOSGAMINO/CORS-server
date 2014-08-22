@@ -1,0 +1,19 @@
+{
+  "name": "enable-cors",
+  "version": "1.0.0",
+  "private": true,
+  "description": "enabling cors service throught express ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "cors"
+  ],
+  "author": "CiccioSgamino",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.8.5"
+  }
+}
