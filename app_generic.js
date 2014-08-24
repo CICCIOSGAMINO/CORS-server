@@ -12,14 +12,13 @@ app = express();
 app.use(express.static(__dirname + '/static'));
 
 
-// set the header to accept the CORS request ------------------------  CORS   ---------------------------------------------
+// set the header to accept the CORS request ------------------------  CORS enable    ---------------------------------------
 app.all('*', function(req, res, next){
 	res.header('Access-Control-Allow-Origin', '*');
 	res.header('Access-Control-Allow-Headers', 'X-Request-With');
 	next();
 });
-//  ------------------------------------------------------------------  CORS  ---------------------------------------------
-
+//  ------------------------------------------------------------------  CORS enable   ---------------------------------------
 app.get('/', function(req, res){
 	res.sendFile(__dirname + '/static/generic.html');
 	console.log(req.path);
