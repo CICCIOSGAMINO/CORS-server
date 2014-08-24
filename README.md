@@ -27,7 +27,11 @@ and  "Access-Control-Allow-Headers", "X-Requested-With" in all the response.  it
 
 ### HTML5 
 For have an idea of how use the resources see the HTML folder in the project, remember to start the Express service on you machine 
-before open the html pages.
+before open the html pages. 
+
+### Polymer 
+Polymer is a custom elements build tool powered by Google very powerful for create your own custom html custom elements, once the 
+custom-element are made you can share it by CORS server too . 
 
 ### Error 
 We present some error, from first situation when you try to read the .html file from a local folder (local folder is not a CORS server),

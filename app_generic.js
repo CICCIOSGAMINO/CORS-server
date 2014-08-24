@@ -1,3 +1,9 @@
+/* 
+	Generic app can serve all the resources present in the static directory, es if a file foo.html is in the static 
+	directory, you can access to it through the address   http://server-addr:port/static/foo.html 
+
+*/ 
+
 var express = require('express');
 
 app = express();
