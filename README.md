@@ -12,6 +12,9 @@ a simple command you can start a developer test server :
 
 	grunt serve 
 	
+### Yeoman 
+Is easy too to use with Yeoman and grunt gain to server the resources in dev mode, but if you can buil your 
+CORS server NOde.js still remain a good choice ! 
 
 ### Express
 Express is the Node.js mainly famous application framework, use in this case to accept the CORS request and responde with the right 
