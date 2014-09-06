@@ -7,7 +7,7 @@ Cross-Origin Resource Sharing (CORS) is a specification that enables truly open 
 A CORS server give the CORS resources on the web through simple GET request to the resources (like REST apis). 
 
 ### Grunt 
-Another tool to use in develope mode to serve the CORS enable content is Grunt, check out the docs about that, with 
+Another tool to use in develope mode to serve the CORS enable content is Grunt (grunt is in chief for automation) , check out the docs about that, with 
 a simple command you can start a developer test server : 
 
 	grunt serve 
