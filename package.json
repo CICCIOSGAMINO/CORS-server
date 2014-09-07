@@ -15,5 +15,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.8.5"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.4",
+    "zombie": "^2.0.0-alpha31"
   }
 }
