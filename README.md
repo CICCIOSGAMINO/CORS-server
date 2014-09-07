@@ -2,9 +2,19 @@ enable-cors
 ===========
 
 ### Intro 
-Cross-Origin Resource Sharing (CORS) is a specification that enables truly open access across domain-boundaries. If you serve public content, please consider using CORS to open it up for universal JavaScript/browser access. 
+Cross-Origin Resource Sharing (CORS) is a specification that enables truly open access across domain-boundaries. If you serve public content, please consider using CORS to open it up for universal JavaScript/browser access.
 
 A CORS server give the CORS resources on the web through simple GET request to the resources (like REST apis). 
+
+### Grunt 
+Another tool to use in develope mode to serve the CORS enable content is Grunt (grunt is in chief for automation) , check out the docs about that, with 
+a simple command you can start a developer test server : 
+
+	grunt serve 
+	
+### Yeoman 
+Is easy too to use with Yeoman and grunt gain to server the resources in dev mode, but if you can buil your 
+CORS server NOde.js still remain a good choice ! 
 
 ### Express
 Express is the Node.js mainly famous application framework, use in this case to accept the CORS request and responde with the right 
