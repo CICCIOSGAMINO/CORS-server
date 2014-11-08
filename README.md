@@ -2,7 +2,7 @@ enable-cors
 ===========
 
 ### Intro 
-Cross-Origin Resource Sharing (CORS) is a specification that enables truly open access across domain-boundaries. If you serve public content, please consider using CORS to open it up for universal JavaScript/browser access.
+Cross-Origin Resource Sharing (CORS) is a specification that enables truly open access across domain-boundaries. this is one of the specification of HTML5. If you serve public content, please consider using CORS to open it up for universal JavaScript/browser access.
 
 A CORS server give the CORS resources on the web through simple GET request to the resources (like REST apis). 
 
